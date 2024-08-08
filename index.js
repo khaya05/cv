@@ -52,7 +52,25 @@ function updateWeather(data) {
   const windSpeed = data.wind.speed;
   const humidity = data.main.humidity;
   const weatherIcon = data.weather[0].icon;
-  const currentDateTime = new Date();
+
+  function updateTime() {
+    const currentDateTime = new Date();
+
+    timeElements.forEach((element) => {
+      element.textContent = currentDateTime.toLocaleTimeString([], {
+        hour: '2-digit',
+        minute: '2-digit',
+      });
+    });
+
+    dateElements.forEach((element) => {
+      element.textContent = currentDateTime.toDateString();
+    });
+  }
+ 
+  updateTime();
+ 
+  setInterval(updateTime, 60000);
 
   temperatureElements.forEach((element) => {
     element.innerHTML = `${temperature}&deg;C`;
@@ -72,17 +90,6 @@ function updateWeather(data) {
 
   weatherIconImages.forEach((element) => {
     element.src = `http://openweathermap.org/img/wn/${weatherIcon}.png`;
-  });
-
-  timeElements.forEach((element) => {
-    element.textContent = currentDateTime.toLocaleTimeString([], {
-      hour: '2-digit',
-      minute: '2-digit',
-    });
-  });
-
-  dateElements.forEach((element) => {
-    element.textContent = currentDateTime.toDateString();
   });
 }
 
