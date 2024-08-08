@@ -1,27 +1,29 @@
-const menuToggle = document.getElementById('menu-toggle');
-const menuClose = document.getElementById('menu-close');
-const mobileNav = document.getElementById('mobile-nav');
-const overlay = document.getElementById('overlay'); 
-const temp = document.querySelector('.temperature');
-const loc = document.querySelector('.location');
-const wind = document.querySelector('.wind-speed');
-const humid = document.querySelector('#humidity');
-const icon = document.querySelector('.weather-icon-img');
-const date = document.querySelector('.date');
-const time = document.querySelector('.time'); 
+const menuToggleButton = document.getElementById('menu-toggle');
+const menuCloseButton = document.getElementById('menu-close');
+const mobileNavigation = document.getElementById('mobile-nav');
+const pageOverlay = document.getElementById('overlay');
+
+const temperatureElements = document.querySelectorAll('.temperature');
+const locationElements = document.querySelectorAll('.location');
+const windSpeedElements = document.querySelectorAll('.wind-speed');
+const humidityElements = document.querySelectorAll('.humidity');
+const weatherIconImages = document.querySelectorAll('.weather-icon-img');
+const dateElements = document.querySelectorAll('.date');
+const timeElements = document.querySelectorAll('.time');
+
 window.addEventListener('load', () => {
   document.body.classList.add('visible');
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  function toggleNav() {
-    mobileNav.classList.toggle('open');
-    overlay.classList.toggle('open');
+  function toggleNavigation() {
+    mobileNavigation.classList.toggle('open');
+    pageOverlay.classList.toggle('open');
   }
 
-  menuToggle.addEventListener('click', toggleNav);
-  menuClose.addEventListener('click', toggleNav);
-  overlay.addEventListener('click', toggleNav);
+  menuToggleButton.addEventListener('click', toggleNavigation);
+  menuCloseButton.addEventListener('click', toggleNavigation);
+  pageOverlay.addEventListener('click', toggleNavigation);
 });
 
 function getLocation() {
@@ -33,12 +35,12 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  const lat = position.coords.latitude;
-  const lon = position.coords.longitude;
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
   const apiKey = 'ed7d1a371f85964ea454aaaa2c4717ab';
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+  const weatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
 
-  fetch(url)
+  fetch(weatherApiUrl)
     .then((response) => response.json())
     .then((data) => updateWeather(data))
     .catch((error) => console.error('Error fetching weather data:', error));
@@ -51,17 +53,37 @@ function updateWeather(data) {
   const humidity = data.main.humidity;
   const weatherIcon = data.weather[0].icon;
   const currentDateTime = new Date();
- 
-  temp.innerHTML = `${temperature}&deg;C`;
-  loc.textContent = location;
-  wind.textContent = `${windSpeed} km/h`;
-  humid.textContent = `${humidity}%`;
-  icon.src = `http://openweathermap.org/img/wn/${weatherIcon}.png`;
-  time.textContent = currentDateTime.toLocaleTimeString([], {
-    hour: '2-digit',
-    minute: '2-digit',
+
+  temperatureElements.forEach((element) => {
+    element.innerHTML = `${temperature}&deg;C`;
   });
-  date.textContent = currentDateTime.toDateString();
+
+  locationElements.forEach((element) => {
+    element.textContent = location;
+  });
+
+  windSpeedElements.forEach((element) => {
+    element.textContent = `${windSpeed} km/h`;
+  });
+
+  humidityElements.forEach((element) => {
+    element.textContent = `${humidity}%`;
+  });
+
+  weatherIconImages.forEach((element) => {
+    element.src = `http://openweathermap.org/img/wn/${weatherIcon}.png`;
+  });
+
+  timeElements.forEach((element) => {
+    element.textContent = currentDateTime.toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+  });
+
+  dateElements.forEach((element) => {
+    element.textContent = currentDateTime.toDateString();
+  });
 }
 
 getLocation();
