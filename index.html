@@ -21,13 +21,13 @@
             <li><a href="#projects">Projects</a></li>
           </ul>
 
-          <div class="weather">
+          <div id="mobile-weather"` class="weather">
             <div class="time-date">
               <p class="time">12:00 pm</p>
               <p class="date">Wed, Aug 7</p>
             </div>
             <figure id="weather-icon">
-              <img src="../icons/clouds.png" alt="icon" />
+              <img src="./icons/clouds.png" alt="icon" />
             </figure>
             <div class="weather-info">
               <p class="temperature">20&deg;C</p>
@@ -36,21 +36,21 @@
               <div class="wind-humidity">
                 <div class="extra-info">
                   <figure class="icon">
-                    <img src="../icons/wind.png" alt="humidity" />
+                    <img src="./icons/wind.png" alt="humidity" class="weather-icon-img" />
                   </figure>
                   <div class="wind">
-                    <span class="val">10 km/h</span>
-                    <span>Wind speed</span>
+                    <span class="wind-speed">10 km/h</span>
+                    <span></span>Wind speed</span>
                   </div>
                 </div>
 
                 <div class="humidity">
                   <div class="extra-info">
                     <figure class="icon">
-                      <img src="../icons/humidity.png" alt="wind" />
+                      <img src="./icons/humidity.png" alt="wind" />
                     </figure>
                     <div class="wind">
-                      <span class="val">10%</span>
+                      <span id=`humidity` class="val">10%</span>
                       <span>Humidity</span>
                     </div>
                   </div>
@@ -82,7 +82,7 @@
           </p>
         </div>
         <figure>
-          <img src="../icons/Secure-data-cuate.svg" alt="code typing figure" />
+          <img src="./icons/Secure-data-cuate.svg" alt="code typing figure" />
         </figure>
       </div>
     </header>
@@ -128,44 +128,45 @@
           </ul>
         </div>
 
-        <div id="desktop-weather" class="weather">
-          <div class="time-date">
-            <p class="time">12:00 pm</p>
-            <p class="date">Wed, Aug 7</p>
-          </div>
-          <figure id="weather-icon">
-            <img src="../icons/clouds.png" alt="icon" />
-          </figure>
-          <div class="weather-info">
-            <p class="temperature">20&deg;C</p>
-            <p class="location">New York</p>
+          <div id="desktop-weather"` class="weather">
+            <div class="time-date">
+              <p class="time">12:00 pm</p>
+              <p class="date">Wed, Aug 7</p>
+            </div>
+            <figure id="weather-icon">
+              <img src="./icons/clouds.png" alt="icon" />
+            </figure>
+            <div class="weather-info">
+              <p class="temperature">20&deg;C</p>
+              <p class="location">New York</p>
 
-            <div class="wind-humidity">
-              <div class="extra-info">
-                <figure class="icon">
-                  <img src="../icons/wind.png" alt="humidity" />
-                </figure>
-                <div class="wind">
-                  <span class="val">10 km/h</span>
-                  <span>Wind speed</span>
-                </div>
-              </div>
-
-              <div class="humidity">
+              <div class="wind-humidity">
                 <div class="extra-info">
                   <figure class="icon">
-                    <img src="../icons/humidity.png" alt="wind" />
+                    <img src="./icons/wind.png" alt="humidity" class="weather-icon-img" />
                   </figure>
                   <div class="wind">
-                    <span class="val">10%</span>
-                    <span>Humidity</span>
+                    <span class="wind-speed">10 km/h</span>
+                    <span></span>Wind speed</span>
                   </div>
                 </div>
+
+                <div class="humidity">
+                  <div class="extra-info">
+                    <figure class="icon">
+                      <img src="./icons/humidity.png" alt="wind" />
+                    </figure>
+                    <div class="wind">
+                      <span id=`humidity` class="val">10%</span>
+                      <span>Humidity</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="humidity"></div>
               </div>
-              <div class="humidity"></div>
             </div>
           </div>
-        </div>
+
       </aside>
       <div class="right">
         <h2 id="skills">skills</h2>
@@ -296,15 +297,11 @@
         <h2 id="projects">Projects</h2>
         <h3><span>Audiophile</span> e-cormmerce website</h3>
         <p class="description">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-          neque accusantium adipisci nostrum dicta nam totam atque. Harum illum
-          dolorem facilis enim dolore possimus aut praesentium impedit. Fugiat,
-          dolorum veniam?
+          Used <strong>ReactJS</strong> and <strong>Styled-Components</strong> to build the ui. Used <strong>Redux</strong> to manange the state. Done this by creating two separate slices, the UISlice for ui-related actions and CartSlice for cart actions. Users can:
         </p>
         <ul class="features">
           <li>
-            <span>Main feature:</span> Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Ea, quam.
+            <strong>Media queries:</strong> View different layouts depending on their devices screen size.
           </li>
           <li>
             <span>Main feature:</span> Lorem ipsum dolor sit amet consectetur
