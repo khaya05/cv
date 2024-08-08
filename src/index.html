@@ -1,0 +1,354 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thandazani CV</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body class="slide-in">
+    <header>
+      <button id="menu-toggle">☰</button>
+      <nav id="mobile-nav">
+        <button id="menu-close">✕</button>
+        <div class="nav-container">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+
+          <div class="weather">
+            <div class="time-date">
+              <p class="time">12:00 pm</p>
+              <p class="date">Wed, Aug 7</p>
+            </div>
+            <figure id="weather-icon">
+              <img src="../icons/clouds.png" alt="icon" />
+            </figure>
+            <div class="weather-info">
+              <p class="temperature">20&deg;C</p>
+              <p class="location">New York</p>
+
+              <div class="wind-humidity">
+                <div class="extra-info">
+                  <figure class="icon">
+                    <img src="../icons/wind.png" alt="humidity" />
+                  </figure>
+                  <div class="wind">
+                    <span class="val">10 km/h</span>
+                    <span>Wind speed</span>
+                  </div>
+                </div>
+
+                <div class="humidity">
+                  <div class="extra-info">
+                    <figure class="icon">
+                      <img src="../icons/humidity.png" alt="wind" />
+                    </figure>
+                    <div class="wind">
+                      <span class="val">10%</span>
+                      <span>Humidity</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="humidity"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav id="desktop-nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+      <div id="overlay"></div>
+
+      <div class="hero" id="hero">
+        <div class="hero-container">
+          <h3>Hi there 👋🏼</h3>
+          <h1>I'm <span>Thandazani</span> Mnyandu</h1>
+          <p>
+            Im an aspiring web developer based in Nkandla, in KwaZulu-Natal,
+            currenty doing a lernership with Umuzi
+          </p>
+        </div>
+        <figure>
+          <img src="../icons/Secure-data-cuate.svg" alt="code typing figure" />
+        </figure>
+      </div>
+    </header>
+
+    <main>
+      <aside id="about" class="left">
+        <div class="about-container">
+          <h2><span>About</span> Me</h2>
+          <p class="about">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quis
+            quam natus, similique qui dignissimos in impedit incidunt quidem
+            libero quas, reiciendis commodi ullam aut perspiciatis dolorum
+            tempore provident perferendis!
+          </p>
+          <ul class="socials">
+            <li>
+              <!-- github -->
+              <a href="#">
+                <i class="lni lni-github-original"></i>
+                <span>github/khaya05</span>
+              </a>
+            </li>
+            <!-- linkedin -->
+            <li>
+              <a href="#"
+                ><i class="lni lni-linkedin-original"></i
+                ><span>linkedin/khaya05</span></a
+              >
+            </li>
+            <!-- phone -->
+            <li>
+              <a href="#"
+                ><i class="lni lni-phone"></i><span>0763947741</span></a
+              >
+            </li>
+            <!-- email -->
+            <li>
+              <a href="#"
+                ><i class="lni lni-envelope"></i
+                ><span>khayamnyandu5@gmail.com</span></a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div id="desktop-weather" class="weather">
+          <div class="time-date">
+            <p class="time">12:00 pm</p>
+            <p class="date">Wed, Aug 7</p>
+          </div>
+          <figure id="weather-icon">
+            <img src="../icons/clouds.png" alt="icon" />
+          </figure>
+          <div class="weather-info">
+            <p class="temperature">20&deg;C</p>
+            <p class="location">New York</p>
+
+            <div class="wind-humidity">
+              <div class="extra-info">
+                <figure class="icon">
+                  <img src="../icons/wind.png" alt="humidity" />
+                </figure>
+                <div class="wind">
+                  <span class="val">10 km/h</span>
+                  <span>Wind speed</span>
+                </div>
+              </div>
+
+              <div class="humidity">
+                <div class="extra-info">
+                  <figure class="icon">
+                    <img src="../icons/humidity.png" alt="wind" />
+                  </figure>
+                  <div class="wind">
+                    <span class="val">10%</span>
+                    <span>Humidity</span>
+                  </div>
+                </div>
+              </div>
+              <div class="humidity"></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="right">
+        <h2 id="skills">skills</h2>
+
+        <ul class="skills">
+          <li class="skill">
+            <i class="lni lni-javascript"></i>
+            <span>JavaScript</span>
+          </li>
+
+          <li class="skill">
+            <i class="lni lni-html5"></i>
+            <span> HTML</span>
+          </li>
+
+          <li class="skill">
+            <i class="lni lni-css3"></i>
+            <span> CSS</span>
+          </li>
+
+          <li class="skill">
+            <i class="lni lni-react"></i>
+            <span> React</span>
+          </li>
+
+          <li class="skill">
+            <i class="lni lni-python"></i>
+            <span>Python</span>
+          </li>
+
+          <li class="skill">
+            <i class="lni lni-ubuntu"></i>
+            <span> Bash</span>
+          </li>
+
+          <li class="skill">
+            <i class="lni lni-git"></i>
+            <span> Git</span>
+          </li>
+
+          <li class="skill">
+            <i class="lni lni-github-original"></i>
+            <span> Github</span>
+          </li>
+
+          <li class="skill">
+            <i class="lni lni-nodejs"></i>
+            <span>NodeJS</span>
+          </li>
+
+          <li class="skill">
+            <i class="lni lni-database"></i>
+            <span>PostgreSQL</span>
+          </li>
+
+          <li class="skill">
+            <i class="lni lni-database"></i>
+            <span>MongoDB</span>
+          </li>
+        </ul>
+
+        <h2 id="education">Education</h2>
+        <section class="education">
+          <div class="milestone">
+            <p><span class="institute">Matric</span> | Nkandla High School</p>
+            <p class="year"><span>Year</span> | 2017</p>
+          </div>
+          <!-- bootcamp -->
+          <div class="milestone">
+            <p><span class="institute">Umuzi</span> | Web dev bootcamp</p>
+            <p class="year"><span>Year</span> | 2022</p>
+          </div>
+          <!-- learnership -->
+          <div class="milestone">
+            <p><span class="institute">Umuzi</span> | Web dev learnership</p>
+            <p class="year"><span>Year</span> | 2024</p>
+          </div>
+        </section>
+
+        <h2 id="certificates">Technical Certificates</h2>
+        <section class="certifications">
+          <div class="milestone">
+            <p>
+              <span class="institute">freeCodeCamp</span> | Responsive Web
+              Design
+            </p>
+            <p class="year"><span>Year</span> | 2020</p>
+          </div>
+
+          <div class="milestone">
+            <p>
+              <span class="institute">freeCodeCamp</span> | Javascript Data
+              Structures and Algorithms
+            </p>
+            <p class="year"><span>Year</span> | 2020</p>
+          </div>
+
+          <div class="milestone">
+            <p>
+              <span class="institute">freeCodeCamp</span> | Scientific
+              Computation with Python
+            </p>
+            <p class="year"><span>Year</span> | 2020</p>
+          </div>
+
+          <div class="milestone">
+            <p><span class="institute">SoloLern</span> | SQL</p>
+            <p class="year"><span>Year</span> | 2022</p>
+          </div>
+
+          <div class="milestone">
+            <p>
+              <span class="institute">Udemy</span> | JavaScript Tutorial and
+              Projects
+            </p>
+            <p class="year"><span>Year</span> | 2022</p>
+          </div>
+
+          <div class="milestone">
+            <p>
+              <span class="institute">UDEMY</span> | React - The Complete Guide
+              (incl Hooks, React Router, Redux)
+            </p>
+            <p class="year"><span>Year</span> | 2023</p>
+          </div>
+        </section>
+
+        <h2 id="projects">Projects</h2>
+        <h3><span>Audiophile</span> e-cormmerce website</h3>
+        <p class="description">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+          neque accusantium adipisci nostrum dicta nam totam atque. Harum illum
+          dolorem facilis enim dolore possimus aut praesentium impedit. Fugiat,
+          dolorum veniam?
+        </p>
+        <ul class="features">
+          <li>
+            <span>Main feature:</span> Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ea, quam.
+          </li>
+          <li>
+            <span>Main feature:</span> Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ea, quam.
+          </li>
+          <li>
+            <span>Main feature:</span> Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ea, quam.
+          </li>
+          <li>
+            <span>Main feature:</span> Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ea, quam.
+          </li>
+        </ul>
+
+        <h3><span>FullStack</span> Markdown editor</h3>
+        <p class="description">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+          neque accusantium adipisci nostrum dicta nam totam atque. Harum illum
+          dolorem facilis enim dolore possimus aut praesentium impedit. Fugiat,
+          dolorum veniam?
+        </p>
+        <ul class="features">
+          <li>
+            <span>Main feature:</span> Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ea, quam.
+          </li>
+          <li>
+            <span>Main feature:</span> Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ea, quam.
+          </li>
+          <li>
+            <span>Main feature:</span> Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ea, quam.
+          </li>
+          <li>
+            <span>Main feature:</span> Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ea, quam.
+          </li>
+        </ul>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Thandazani Mnyandu. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
